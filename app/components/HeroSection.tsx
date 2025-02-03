@@ -21,7 +21,7 @@ export const HeroSection = () => (
           Ver características
         </CTAButton>
         <CTAButton
-          href="https://github.com/JCFavaretto/template-next-tailwindcss-docker"
+          href="https://github.com/JCFavaretto/template-next-tailwindcss-docker#readme"
           variant="primary"
         >
           Ver documentación
