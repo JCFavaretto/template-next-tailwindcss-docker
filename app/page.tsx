@@ -48,21 +48,7 @@ export default function Home() {
 
       <TechStack />
 
-      <section className="bg-blue-50 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">
-            ¿Listo para comenzar?
-          </h2>
-          <div className="flex justify-center gap-4">
-            <CTAButton href="#features" variant="secondary">
-              Ver características
-            </CTAButton>
-            <CTAButton href="/documentation" variant="primary">
-              Ver documentación
-            </CTAButton>
-          </div>
-        </div>
-      </section>
+      <section className="bg-blue-50 py-20"></section>
     </div>
   );
 }

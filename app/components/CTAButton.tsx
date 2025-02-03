@@ -10,8 +10,10 @@ export const CTAButton = ({
 }) => {
   const baseStyles = "px-8 py-3 rounded-lg font-semibold transition-colors";
   const variants = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700",
-    secondary: "bg-white text-blue-600 hover:bg-gray-100",
+    primary:
+      "bg-blue-600 text-white shadow-sm hover:bg-blue-700 hover:shadow-lg",
+    secondary:
+      "bg-white text-blue-600 shadow-sm hover:bg-gray-100 hover:shadow-lg",
   };
 
   return (

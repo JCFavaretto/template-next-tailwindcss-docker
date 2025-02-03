@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Next.js + Tailwind CSS + Docker Template
 
-## Getting Started
+¡Bienvenido a tu nuevo proyecto! Este es un template profesional para crear aplicaciones modernas con Next.js, Tailwind CSS y Docker. Perfecto para comenzar rápidamente con las mejores prácticas.
 
-First, run the development server:
+## 🌟 Características Principales
+
+- **Next.js 14**: App Router, Server Actions y rendimiento optimizado.
+- **Tailwind CSS**: Diseño responsive y sistema de diseño modular.
+- **TypeScript**: Tipado estático para mayor seguridad en el código.
+- **Dockerizado**: Despliegue profesional con Nginx y build multi-etapa.
+- **Estructura Modular**: Componentes reutilizables y fácil de escalar.
+
+## 🛠️ Cómo Usar Este Template
+
+### 1. Clonar el Repositorio
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git mi-proyecto
+cd mi-proyecto
+```
+
+### 2. Instalar Dependencias
+
+```bash
+npm install
+```
+
+### 3. Cambiar el Nombre del Proyecto
+
+Si deseas cambiar el nombre del proyecto, sigue estos pasos:
+
+#### En `package.json`:
+
+```json
+{
+  "name": "mi-proyecto",
+  "version": "1.0.0",
+  ...
+}
+```
+
+#### En `app/layout.tsx`:
+
+```tsx
+export const metadata = {
+  title: "Mi Proyecto",
+  description: "Descripción de mi proyecto",
+};
+```
+
+#### En `docker-compose.yml` (opcional):
+
+```yaml
+services:
+  web:
+    container_name: mi-proyecto
+```
+
+### 4. Ejecutar en Modo Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visita [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. Construir y Ejecutar con Docker
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+docker-compose up --build
+```
 
-## Learn More
+El proyecto estará disponible en [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Estructura del Proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```plaintext
+mi-proyecto/
+├── app/
+│   ├── components/       # Componentes reutilizables
+│   ├── layout.tsx        # Layout principal
+│   └── page.tsx          # Página de inicio
+├── public/               # Archivos estáticos
+├── docker-compose.yml    # Configuración de Docker
+├── Dockerfile            # Configuración de la imagen Docker
+├── tailwind.config.ts    # Configuración de Tailwind CSS
+└── package.json          # Dependencias y scripts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Personalización
 
-## Deploy on Vercel
+### Cambiar Colores
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Modifica el archivo `tailwind.config.ts` para personalizar los colores:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+theme: {
+  extend: {
+    colors: {
+      primary: '#3B82F6', // Azul por defecto
+      secondary: '#6366F1',
+    }
+  }
+}
+```
+
+### Agregar Secciones
+
+Crea nuevos componentes en `/app/components` y úsalos en `page.tsx`.
+
+## 📦 Despliegue
+
+### Docker
+
+Para desplegar en producción:
+
+```bash
+docker-compose up --build -d
+```
+
+Detener Docker:
+
+```bash
+docker-compose down
+```
+
+### Vercel
+
+Este proyecto está listo para desplegar en Vercel. Simplemente conecta tu repositorio y sigue los pasos.
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT. Ver `LICENSE` para más detalles.
+
+## 🙌 Contribuir
+
+¡Las contribuciones son bienvenidas! Si encuentras un error o tienes una sugerencia, abre un issue o envía un pull request.
+
+✨ ¡Gracias por usar este template! ✨
